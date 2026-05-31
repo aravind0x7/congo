@@ -62,6 +62,7 @@
   section {
     position: relative; z-index: 2;
     min-height: 100svh;
+    min-height: 100dvh;
     display: flex; align-items: center; justify-content: center;
     padding: 60px 24px;
   }
@@ -404,6 +405,150 @@
     font-family: 'DM Sans', sans-serif;
   }
   .prompt-btn:hover { transform: scale(1.03); }
+
+ /* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+
+  section {
+    min-height: auto;
+    padding: 70px 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 12vw, 3.5rem);
+  }
+
+  .hero-sub {
+    font-size: 1.3rem;
+  }
+
+  .hero-msg {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0 6px;
+  }
+
+  .photo-frame {
+    width: min(240px, 80vw);
+    height: min(240px, 80vw);
+  }
+
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .lang-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .lang-card {
+    padding: 14px 10px;
+  }
+
+  .lang-card .word {
+    font-size: 0.9rem;
+  }
+
+  .letter-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .letter-card p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .milestone-cards {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+
+  .m-card {
+    padding: 18px 14px;
+  }
+
+  .final-msg {
+    font-size: 2rem;
+  }
+
+  .final-tanglish {
+    font-size: 1.15rem;
+    padding: 0 10px;
+  }
+
+  .bgm-btn {
+    width: 48px;
+    height: 48px;
+    bottom: 16px;
+    right: 16px;
+    font-size: 1.1rem;
+  }
+
+  .prompt-card {
+    width: calc(100vw - 32px);
+    max-width: 340px;
+    padding: 28px 22px;
+  }
+
+  .nav-dots {
+    display: none;
+  }
+
+  .scroll-hint {
+    bottom: 12px;
+  }
+
+  .ribbon-item {
+    font-size: 0.9rem;
+  }
+
+  .heart-pulse {
+    font-size: 3rem;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 480px) {
+
+  .hero-badge {
+    font-size: 0.65rem;
+    padding: 6px 14px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .photo-frame {
+    width: 220px;
+    height: 220px;
+  }
+
+  .lang-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lang-card .flag {
+    font-size: 1.4rem;
+  }
+
+  .lang-card .word {
+    font-size: 0.8rem;
+  }
+
+  .m-card .m-num {
+    font-size: 1.6rem;
+  }
+}
 </style>
 </head>
 <body>
